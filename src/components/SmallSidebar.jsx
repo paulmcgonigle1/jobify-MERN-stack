@@ -4,6 +4,7 @@ import Logo from "./Logo";
 import { FaTimes } from "react-icons/fa";
 import links from "../utils/links";
 import { NavLink } from "react-router-dom";
+import NavLinks from "./NavLinks";
 const SmallSidebar = () => {
   const { showSidebar, toggleSidebar } = useDashboardContext();
 
@@ -21,23 +22,7 @@ const SmallSidebar = () => {
           <header>
             <Logo />
           </header>
-          <div className="nav-links">
-            {links.map((link) => {
-              const { text, path, icon } = link;
-              return (
-                <NavLink
-                  to={path}
-                  key={text}
-                  className="nav-link"
-                  onClick={toggleSidebar}
-                  end //added this so that the root isnt alaways 'active'
-                >
-                  <span className="icon">{icon}</span>
-                  {text}
-                </NavLink>
-              );
-            })}
-          </div>
+          <NavLinks />
         </div>
       </div>
     </Wrapper>
