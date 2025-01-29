@@ -47,7 +47,7 @@ const router = createBrowserRouter([
             element: <AllJobs />,
           },
           {
-            path: "profle",
+            path: "profile",
             element: <Profile />,
           },
           {
